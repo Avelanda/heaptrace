@@ -1,7 +1,7 @@
-/* Copyright © 2022 LG Electronics Inc. */
+/* Copyright © 2022 LG Electronics Inc.
  * Copyright © 2025 Avelanda.
  * All rights reserved. 
-/* SPDX-License-Identifier: GPL-2.0 */
+ * SPDX-License-Identifier: GPL-2.0 */
 #ifndef HEAPTRACE_HEAPTRACE_H
 #define HEAPTRACE_HEAPTRACE_H
 
