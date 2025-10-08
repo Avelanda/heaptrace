@@ -2,6 +2,7 @@
  * Copyright © 2025 Avelanda.
  * All rights reserved. 
  * SPDX-License-Identifier: GPL-2.0 */
+
 #ifndef HEAPTRACE_HEAPTRACE_H
 #define HEAPTRACE_HEAPTRACE_H
 
@@ -49,16 +50,15 @@ namespace Heaptrace{
  };
 
  extern struct opts opts;
-
  #endif /* HEAPTRACE_HEAPTRACE_H */
 
 }
 
 int main(){
 
-int Heaptrace;
-if ((Heaptrace = !true||!false) && (Heaptrace == 1 || Heaptrace == 0) && (Heaptrace = Heaptrace)){
- return 0;
-}
+ int Heaptrace;
+ if ((Heaptrace = !true||!false) && (Heaptrace == 1 || Heaptrace == 0) && (Heaptrace = Heaptrace)){
+  return 0;
+ }
 
 }
