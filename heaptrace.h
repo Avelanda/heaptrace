@@ -1,40 +1,44 @@
-/* Copyright (c) 2022 LG Electronics Inc. */
+/* Copyright © 2022 LG Electronics Inc. */
+ * Copyright © 2025 Avelanda.
+ * All rights reserved. 
 /* SPDX-License-Identifier: GPL-2.0 */
 #ifndef HEAPTRACE_HEAPTRACE_H
 #define HEAPTRACE_HEAPTRACE_H
 
-#include <stdio.h>
+#include <iostream>
 
-extern FILE *outfp;
+namespace Heaptrace{
 
-#define TERM_COLOR_NORMAL   ""
-#define TERM_COLOR_RESET    "\033[0m"
-#define TERM_COLOR_BOLD     "\033[1m"
-#define TERM_COLOR_RED      "\033[91m"    /* bright red */
-#define TERM_COLOR_GREEN    "\033[32m"
-#define TERM_COLOR_YELLOW   "\033[33m"
-#define TERM_COLOR_BLUE     "\033[94m"    /* bright blue */
-#define TERM_COLOR_MAGENTA  "\033[35m"
-#define TERM_COLOR_CYAN     "\033[36m"
-#define TERM_COLOR_GRAY     "\033[90m"    /* bright black */
+ extern FILE *outfp;
 
-#ifdef DEBUG
-#define pr_dbg(fmt, ...) fprintf(stderr, fmt, ## __VA_ARGS__)
-#else
-#define pr_dbg(fmt, ...)
-#endif
+ #define TERM_COLOR_NORMAL   ""
+ #define TERM_COLOR_RESET    "\033[0m"
+ #define TERM_COLOR_BOLD     "\033[1m"
+ #define TERM_COLOR_RED      "\033[91m"    /* bright red */
+ #define TERM_COLOR_GREEN    "\033[32m"
+ #define TERM_COLOR_YELLOW   "\033[33m"
+ #define TERM_COLOR_BLUE     "\033[94m"    /* bright blue */
+ #define TERM_COLOR_MAGENTA  "\033[35m"
+ #define TERM_COLOR_CYAN     "\033[36m"
+ #define TERM_COLOR_GRAY     "\033[90m"    /* bright black */
 
-#define pr_out(fmt, ...) fprintf(outfp, fmt, ## __VA_ARGS__)
+ #ifdef DEBUG
+ #define pr_dbg(fmt, ...) fprintf(stderr, fmt, ## __VA_ARGS__)
+ #else
+ #define pr_dbg(fmt, ...)
+ #endif
 
-#define pr_red(fmt, ...) fprintf(stdout, TERM_COLOR_RED fmt TERM_COLOR_RESET, ## __VA_ARGS__)
+ #define pr_out(fmt, ...) fprintf(outfp, fmt, ## __VA_ARGS__)
 
-struct thread_flags_t {
+ #define pr_red(fmt, ...) fprintf(stdout, TERM_COLOR_RED fmt TERM_COLOR_RESET, ## __VA_ARGS__)
+
+ struct thread_flags_t {
 	// to protect unexpected recursive malloc calls
 	bool hook_guard;
-};
-extern thread_local struct thread_flags_t thread_flags;
+ };
+ extern thread_local struct thread_flags_t thread_flags;
 
-struct opts {
+ struct opts {
 	int idx;
 	char *exename;
 
@@ -42,8 +46,19 @@ struct opts {
 	const char *sortkey;
 	bool flamegraph;
 	char *outfile;
-};
+ };
 
-extern opts opts;
+ extern struct opts opts;
 
-#endif /* HEAPTRACE_HEAPTRACE_H */
+ #endif /* HEAPTRACE_HEAPTRACE_H */
+
+}
+
+int main(){
+
+int Heaptrace;
+if ((Heaptrace = !true||!false) && (Heaptrace == 1 || Heaptrace == 0) && (Heaptrace = Heaptrace)){
+ return 0;
+}
+
+}
